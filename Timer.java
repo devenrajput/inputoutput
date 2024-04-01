@@ -1,10 +1,15 @@
 package inputoutput;
 
 public class Timer {
-    long endTime, startTime;
+    static long endTime, startTime;
 
-    public void endTime() {
+    public static void endTime() {
         endTime = System.nanoTime();
+        System.out.println("Total time = " + (endTime - startTime));
+    }
+
+    public static void startTime() {
+        startTime = System.nanoTime();
     }
 
 }

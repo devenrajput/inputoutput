@@ -14,6 +14,7 @@ public class FileDemo {
             // String s = "My name is Devendra Kumar";
             String s = JOptionPane.showInputDialog(null, "Enter your text..");// user input
             byte b[] = s.getBytes();// convert string into byte
+            Timer.startTime();
             for (int i = 0; i < b.length; i++) {
                 System.out.print(b[i] + " "); // print character unicode value
                 fileOutputStream.write(b[i]);// write character one by one in file
@@ -21,6 +22,7 @@ public class FileDemo {
             // fileOutputStream.write(b);//this method get to byte type array
 
             System.out.println();
+            Timer.endTime();
             FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt");
 
             while (true) {
