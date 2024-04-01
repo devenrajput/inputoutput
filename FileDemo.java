@@ -1,13 +1,14 @@
 package inputoutput;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class FileDemo {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         try {
-            @SuppressWarnings("resource")
-            FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt", true);
+            FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt", false);
             String s = "My name is Devendra Kumar";
             byte b[] = s.getBytes();// convert string into byte
             for (int i = 0; i < b.length; i++) {
@@ -15,6 +16,17 @@ public class FileDemo {
                 fileOutputStream.write(b[i]);// write character one by one in file
             }
             // fileOutputStream.write(b);//this method get to byte type array
+
+            System.out.println();
+            FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt");
+
+            while (true) {
+                int i = fileInputStream.read();
+                if (i == -1) {
+                    break;
+                }
+                System.out.print((char) i);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
