@@ -21,7 +21,7 @@ public class FileDemo {
             FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt");
 
             while (true) {
-                int i = fileInputStream.read();
+                int i = fileInputStream.read();//this method return integer value
                 if (i == -1) {
                     break;
                 }
