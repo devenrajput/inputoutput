@@ -15,12 +15,14 @@ public class PrintStreamDemo {
             printStream = new PrintStream(outputStream);
             // printStream.println("hello..");//write the data on file
             System.setOut(printStream);
+            System.setErr(printStream);
             /*
              * This method help us to write the data frome System.out.println();
              * statement on directly file.
              */
             System.out.print("My name is ");
-            System.out.print("Sashank Rajput");
+            System.out.println("Sashank Rajput");
+            System.err.print("Dev is a good boy.");// err variable create for print the error massage
 
         } catch (Exception e) {
             e.printStackTrace();
