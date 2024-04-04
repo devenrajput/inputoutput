@@ -27,7 +27,6 @@ public class DataIO {
             Timer.endTime();
             FileInputStream fileInputStream = new FileInputStream("C:\\Users\\Shiley\\Desktop\\myfile.txt");
             DataInputStream dataInputStream = new DataInputStream(fileInputStream);
-
             System.out.println(dataInputStream.readInt());
 
         } catch (Exception e) {
